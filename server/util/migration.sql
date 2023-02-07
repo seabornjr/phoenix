@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS phoenix;
-CREATE DATABASE phoenix;
 
 -- CREATE TABLE learner to track learner data--
 DROP TABLE IF EXISTS learner;
@@ -13,6 +11,7 @@ CREATE TABLE learner
     gender VARCHAR(25),
     date_of_birth DATE,
     city VARCHAR(100),
+    state_abbrv VARCHAR(4),
     grade INTEGER,
     school TEXT,
     first_gen BOOLEAN,
