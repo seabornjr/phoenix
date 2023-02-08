@@ -10,7 +10,7 @@ const ResourcesPreview = ({navigation}) => {
       <TouchableOpacity 
         style={styles.button} 
         title='Next'
-        onPress={() => navigation.navigate('UserSelection')}
+        onPress={() => navigation.navigate('Login')}
       >
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
