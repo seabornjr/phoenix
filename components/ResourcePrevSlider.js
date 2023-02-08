@@ -3,7 +3,7 @@ import { Animated, Dimensions, FlatList, Image, StyleSheet, Text, View } from "r
 import Pagination from './Pagination';
 
 const {width, height} = Dimensions.get('screen');
-const ResourcePrevSlider = () => {
+const ResourcePrevSlider = ({navigation}) => {
 
 
 

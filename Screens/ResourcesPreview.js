@@ -1,11 +1,12 @@
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import ResourcePrevSlider from '../components/ResourcePrevSlider.js'
 
-
-const NextResource = ({navigation}) => {
+const ResourcesPreview = ({navigation}) => {
   return (
-   
-    <View style={styles.container}>
+   <> 
+       <ResourcePrevSlider />
+       <View style={styles.container}>
       <TouchableOpacity 
         style={styles.button} 
         title='Next'
@@ -14,7 +15,8 @@ const NextResource = ({navigation}) => {
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
     </View>
-    
+      
+   </>
   )
 }
 
@@ -38,4 +40,4 @@ const styles = new StyleSheet.create({
   }
 })
 
-export default NextResource
+export default ResourcesPreview
