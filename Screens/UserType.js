@@ -2,9 +2,9 @@ import { Card } from '@rneui/themed';
 import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const UserType = () => {
+const UserType = ({navigation}) => {
   const handleClick = () =>{
-    return alert('Congrats!!! This is a functioning button.');
+    return navigation.navigate('ResourcesPreview');
    }
      return (
      <View>

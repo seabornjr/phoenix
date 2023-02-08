@@ -1,19 +1,31 @@
 
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import ResourcesPreview from './Pages/ResourcesPreview.js';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import { StyleSheet } from 'react-native';
+import ResourcesPreview from './Screens/ResourcesPreview.js';
+import UserType from './Screens/UserType.js';
 
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-    <ResourcesPreview />
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen
+        name='UserSelection'
+        component={UserType}
+        options={{title: 'Select User Type'}}
+      />
+      <Stack.Screen
+        name="ResourcesPreview"
+        component={ResourcesPreview}
+        options={{title: 'Welcome'}}
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
   );
 }
-
-
 
 const styles = StyleSheet.create({
   container: {

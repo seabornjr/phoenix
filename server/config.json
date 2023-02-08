@@ -1,0 +1,13 @@
+{
+    "dev":{
+
+        "connectionString":"postgres://postgres:postgrespw@localhost:55000/phoenix",
+    
+        "port": 8000
+    }, 
+    
+    "production":{
+        "connectionString":"postgresql://postgres:docker@localhost:5432/trackify"
+        
+    }
+}

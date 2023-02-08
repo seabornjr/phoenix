@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
     container: {
         position: "absolute",
-        bottom: 50,
+        bottom: 150,
         flexDirection: "row",
         marginHorizontal: 3,
         width: "100%",
