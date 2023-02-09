@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
+import BuildProfile from './Screens/BuildProfile.js';
 import LoginScreen from './Screens/LoginScreen.js';
 import ResourcesPreview from './Screens/ResourcesPreview.js';
 import UserType from './Screens/UserType.js';
@@ -26,8 +27,12 @@ export default function App() {
       <Stack.Screen
         name="Login"
         component={LoginScreen}>
-
       </Stack.Screen>
+      <Stack.Screen
+        name="BuildProfile"
+        component={BuildProfile}
+        options={{title: 'Profile'}}
+      />
     </Stack.Navigator>
   </NavigationContainer>
   );
