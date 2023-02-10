@@ -37,9 +37,9 @@ const styles = StyleSheet.create({
 
     },
     container: {
-        width: '90%',
+        width: "90%",
         height: 50,
-        backgroundColor: '#FFF',
+        backgroundColor: '#FFFff',
         borderRadius: 8,
         borderWidth: 1,
         borderColor: '#444',

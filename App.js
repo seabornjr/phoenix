@@ -7,9 +7,11 @@ import BackgroundFirstGenScreen from './Screens/BackgroundFirstGenScreen.js';
 import BackgroundIncome from './Screens/BackgroundIncome.js';
 import BuildProfile from './Screens/BuildProfile.js';
 import GradeAndSchoolScreen from './Screens/GradeAndSchoolScreen.js';
+import GuardianInfo from './Screens/GuardianInfo.js';
 import LoginScreen from './Screens/LoginScreen.js';
 import ResourcesPreview from './Screens/ResourcesPreview.js';
 import UserType from './Screens/UserType.js';
+import WelcomeScreen from './Screens/WelcomeScreen.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +19,11 @@ export default function App() {
   return (
     <NavigationContainer>
     <Stack.Navigator>
+    <Stack.Screen
+        name='Welcome'
+        component={WelcomeScreen}
+        options={{title: 'Home'}}
+      />
       <Stack.Screen
         name='UserSelection'
         component={UserType}
@@ -25,7 +32,7 @@ export default function App() {
       <Stack.Screen
         name="ResourcesPreview"
         component={ResourcesPreview}
-        options={{title: 'Welcome'}}
+        options={{title: 'Feature Preview'}}
       />
       <Stack.Screen
         name="Login"
@@ -35,6 +42,11 @@ export default function App() {
         name="BuildProfile"
         component={BuildProfile}
         options={{title: 'Profile'}}
+      />
+      <Stack.Screen
+        name="GuardianInfo"
+        component={GuardianInfo}
+        options={{title: 'Guardian Information'}}
       />
       <Stack.Screen
         name="GradeAndSchool"

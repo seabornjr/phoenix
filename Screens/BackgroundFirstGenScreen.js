@@ -2,17 +2,23 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const BackgroundFirstGenScreen = ({navigation}) => {
-    const nextPage = "BackgroundIncome"
+    const handleClick = (event) => {
+        return alert('the user clicked ', event.target)
+    }
   return (
     <View style={styles.container}>
         <Text style={styles.heading}>Are you going to be a First Generation college student? </Text>
         <View style={styles.optionsRow}>
            <View>
-            <TouchableOpacity style={[styles.buttonStyle, styles.shadowProps]}>
+            <TouchableOpacity 
+                style={[styles.buttonStyle, styles.shadowProps]}
+                onPress={handleClick}>
                 <Text style={styles.buttonText}>No</Text>
             </TouchableOpacity>
            </View>
-            <TouchableOpacity style={[styles.buttonStyle, styles.shadowProps]}>
+            <TouchableOpacity 
+                style={[styles.buttonStyle, styles.shadowProps]}
+                onPress={handleClick}>
                 <Text style={styles.buttonText}>Yes</Text>
             </TouchableOpacity>
         </View>

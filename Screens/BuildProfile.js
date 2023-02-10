@@ -26,7 +26,7 @@ const [avatar, setAvatar] = useState(require('../assets/DefaultAvatar.png'));
         <CityStateSelector2 />
         <TouchableOpacity 
             style={[styles.buttonContainer, styles.shadowProps]}
-            onPress={() => navigation.navigate("GradeAndSchool")}
+            onPress={() => navigation.navigate("GuardianInfo")}
             >
             <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
