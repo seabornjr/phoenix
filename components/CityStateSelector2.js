@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import React, { useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import SelectDropdown from 'react-native-select-dropdown';
+
 const CityStateSelector2 = () => {
 
     const [city, setCity] = useState("")  
@@ -61,6 +62,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#444',
         justifyContent: 'center',
+        marginRight: 5
        
     },
     textInput: {
