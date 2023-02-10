@@ -7,6 +7,7 @@ const BackgroundRacialScreen = ({navigation}) => {
         <View style={styles.container}>
             <Text style={styles.heading}>What is yor racial background?  </Text>
             <RaceEthnicityDropdown />
+            <Text style={styles.disclaimer}>We use this information to assess your profile better and recommend financial aid, if necessary.</Text>
             <TouchableOpacity 
                     style={[styles.buttonContainer, styles.shadowProps]}
                     onPress={() => navigation.navigate("BackgroundIncome")}
@@ -40,11 +41,16 @@ const BackgroundRacialScreen = ({navigation}) => {
             shadowOpacity: 1,
             shadowRadius: 3,
         },
+        disclaimer:{
+            textAlign: 'center',
+            marginTop: 100,
+            width: '80%'
+        },
         buttonContainer:{
             width: '90%',
             backgroundColor: '#FE5244',
             borderRadius: 10,
-            marginTop: 150,
+            marginTop: 50,
             marginBottom: 50
     
         },

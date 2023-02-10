@@ -9,7 +9,15 @@ import BackgroundRacialScreen from './Screens/BackgroundRacialScreen.js';
 import BuildProfile from './Screens/BuildProfile.js';
 import GradeAndSchoolScreen from './Screens/GradeAndSchoolScreen.js';
 import GuardianInfo from './Screens/GuardianInfo.js';
+import LoadingScreen from './Screens/LoadingScreen.js';
 import LoginScreen from './Screens/LoginScreen.js';
+import PersonalityScreen1 from './Screens/PersonalityScreen1.js';
+import PersonalityScreen2 from './Screens/PersonalityScreen2.js';
+import PersonalityScreen3 from './Screens/PersonalityScreen3.js';
+import PreferencesScreen1_1 from './Screens/PreferencesScreen1_1.js';
+import PreferencesScreen1_2 from './Screens/PreferencesScreen1_2.js';
+import PreferencesScreen2_1 from './Screens/PreferencesScreen2_1.js';
+import PreferencesScreen3 from './Screens/PreferencesScreen3.js';
 import ResourcesPreview from './Screens/ResourcesPreview.js';
 import UserType from './Screens/UserType.js';
 import WelcomeScreen from './Screens/WelcomeScreen.js';
@@ -68,6 +76,46 @@ export default function App() {
         name="BackgroundIncome"
         component={BackgroundIncome}
         options={{title: 'Background'}}
+      />
+      <Stack.Screen
+        name="PersonalityScreen1"
+        component={PersonalityScreen1}
+        options={{title: 'Personality'}}
+      />
+       <Stack.Screen
+        name="Preferences1_1"
+        component={PreferencesScreen1_1}
+        options={{title: 'Preferences'}}
+      />
+      <Stack.Screen
+        name="Preferences1_2"
+        component={PreferencesScreen1_2}
+        options={{title: 'Preferences'}}
+      />
+      <Stack.Screen
+        name="PersonalityScreen2"
+        component={PersonalityScreen2}
+        options={{title: 'Personality'}}
+      />
+      <Stack.Screen
+        name="Preferences2_1"
+        component={PreferencesScreen2_1}
+        options={{title: 'Preferences'}}
+      />
+      <Stack.Screen
+        name="PersonalityScreen3"
+        component={PersonalityScreen3}
+        options={{title: 'Personality'}}
+      />
+      <Stack.Screen
+        name="Preferences3"
+        component={PreferencesScreen3}
+        options={{title: 'Preferences'}}
+      />
+      <Stack.Screen
+        name="LoadingScreen"
+        component={LoadingScreen}
+        options={{title: 'Loading Your Journey'}}
       />
     </Stack.Navigator>
   </NavigationContainer>

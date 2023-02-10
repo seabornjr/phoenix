@@ -9,7 +9,7 @@ const BackgroundIncome = ({navigation}) => {
         <IncomeDropdown />
         <TouchableOpacity 
                 style={[styles.buttonContainer, styles.shadowProps]}
-                onPress={() => navigation.navigate("BackgroundFirstGen")}
+                onPress={() => navigation.navigate("PersonalityScreen1")}
                 >
                 <Text style={styles.buttonTextCont}>Continue</Text>
         </TouchableOpacity>
