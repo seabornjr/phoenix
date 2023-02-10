@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Image, KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import ThirdPartyLogin from '../components/ThirdPartyLogin'
 
 const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState("")
@@ -15,22 +16,26 @@ const LoginScreen = ({navigation}) => {
                 source={require('../assets/brandLogo.png')}
             />
         </View>
+
+        <View style={styles.headingContainer}>
+          <Text style={styles.heading}>Please Login</Text>
+        </View>
     
-      <View style={styles.inputContainer}>
-        <TextInput
-            placeholder='email'
-            value={email}
-            onChange={text => setEmail(text)}
-            style={styles.input}
-        />
+        <View style={styles.inputContainer}>
           <TextInput
-            placeholder='password'
-            value={password}
-            onChange={text => setPassword(text)}
-            style={styles.input}
-            secureTextEntry
-        />
-      </View>
+              placeholder='email'
+              value={email}
+              onChange={text => setEmail(text)}
+              style={styles.input}
+          />
+            <TextInput
+              placeholder='password'
+              value={password}
+              onChange={text => setPassword(text)}
+              style={styles.input}
+              secureTextEntry
+          />
+        </View>
        
         <View style={[styles.buttonContainer, styles.shadowProps]}>
             <TouchableOpacity 
@@ -39,13 +44,18 @@ const LoginScreen = ({navigation}) => {
             >
             <Text style={styles.button}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity 
-                onPress={()=>{navigation.navigate('BuildProfile')}}
-                style={[styles.button, styles.buttonOutline]}
-            >
-            <Text style={styles.button}>Register</Text>
-            </TouchableOpacity>
+        </View>
 
+        <Image source={require('../assets/Divider.png')} />
+
+        <ThirdPartyLogin />
+        
+        <View style={styles.footerContainer}>
+          <Text style={styles.footerText}>Need an account? Register </Text>
+            <TouchableOpacity 
+                onPress={()=>{navigation.navigate('BuildProfile')}}>
+            <Text style={styles.registerHere}>here.</Text>
+            </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
     )
@@ -59,6 +69,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'white'
         
+    },
+    heading: {
+      justifyContent: 'center',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      marginBottom: 15,
+      fontSize: 20 
     },
     inputContainer: {
         width: '80%',
@@ -77,7 +94,8 @@ const styles = StyleSheet.create({
         width: '60%',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 40,
+        margin: 10,
+        marginBottom: 40
         
     },
     button: {
@@ -104,6 +122,17 @@ const styles = StyleSheet.create({
       shadowOffset: {width: 2, height: 4},
       shadowOpacity: 1,
       shadowRadius: 3,
+    },
+    footerContainer:{
+      flexDirection: 'row',
+      marginTop: 50,
+    },
+    footerText: {
+      fontWeight: 'bold',
+    },
+    registerHere: {
+      color: '#FE5244',
+      fontWeight: 'bold',
     }
     
 

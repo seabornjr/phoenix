@@ -3,11 +3,16 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const UserType = ({navigation}) => {
-  const handleClick = () =>{
+  const handleClickLearner = () =>{
     return navigation.navigate('ResourcesPreview');
    }
+
+   const handleClickCounselor = () =>{
+    return alert('Counselor Features Coming Soon');
+   }
+
      return (
-     <View>
+     <View style={styles.container}>
        <Text style={styles.heading}> YOU ARE A: </Text>
        <View style={styles.cardDiv}>
          <Card containerStyle={styles.cardContainer}>
@@ -15,7 +20,7 @@ const UserType = ({navigation}) => {
              <Text style={{ marginBottom: 10 }}>
                Looking for resources to upskill your career.
              </Text>
-             <TouchableOpacity onPress={handleClick}>
+             <TouchableOpacity onPress={handleClickLearner}>
                <Image alt="next-btn"
                  source={require('../assets/NextButtonArrow.png')}
                  style={{ marginLeft: "auto"}}>
@@ -25,10 +30,10 @@ const UserType = ({navigation}) => {
        </View>
        <Card containerStyle={[styles.cardContainer, styles.cardDiv]}>
              <Card.Title>Career Counselor</Card.Title>
-             <Text style={{ marginBottom: 10, flexWrap:"wrap" }}>
+             <Text style={{ marginBottom:10, flexWrap:"wrap" }}>
                Guiding Learners to acheive their career goals.
              </Text>
-             <TouchableOpacity onPress={handleClick}>
+             <TouchableOpacity onPress={handleClickCounselor}>
                <Image alt="next-btn" 
                  source={require('../assets/PurpleNextButtonArrow.png')} 
                  style={{marginLeft: "auto"}}>
@@ -40,17 +45,22 @@ const UserType = ({navigation}) => {
    };
    
    const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+    },
      heading: {
        justifyContent: 'center',
        textAlign: 'center',
        fontWeight: 'bold',
-       marginBottom: 50,
+       marginBottom: 75,
        fontSize: 20 
      },
      cardContainer: {
        borderRadius:15,
        borderColor: "black",
-       boxShadow: 20
+       boxShadow: 20,
      },
      cardDiv: {
        shadowColor: '#171717',
