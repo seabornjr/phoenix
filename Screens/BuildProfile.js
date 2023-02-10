@@ -6,7 +6,7 @@ import GenderDropdown from '../components/GenderDropdown'
 import NameField from '../components/NameField'
 
 
-const BuildProfile = () => {
+const BuildProfile = ({navigation}) => {
     
 const [avatar, setAvatar] = useState(require('../assets/DefaultAvatar.png'));
 
@@ -25,8 +25,8 @@ const [avatar, setAvatar] = useState(require('../assets/DefaultAvatar.png'));
         <DateSelector />
         <CityStateSelector2 />
         <TouchableOpacity 
-            style={styles.buttonContainer}
-            onPress={() => alert('button works yay')}
+            style={[styles.buttonContainer, styles.shadowProps]}
+            onPress={() => navigation.navigate("GradeAndSchool")}
             >
             <Text style={styles.buttonText}>Continue</Text>
         </TouchableOpacity>
@@ -74,6 +74,12 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         margin: 2
+    },
+    shadowProps: {
+        shadowColor: '#00000',
+        shadowOffset: {width: 2, height: 4},
+        shadowOpacity: 1,
+        shadowRadius: 3,
     }
         
 

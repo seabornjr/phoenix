@@ -32,7 +32,7 @@ const LoginScreen = ({navigation}) => {
         />
       </View>
        
-        <View style={styles.buttonContainer}>
+        <View style={[styles.buttonContainer, styles.shadowProps]}>
             <TouchableOpacity 
                 onPress={()=>{navigation.navigate('BuildProfile')}}
                 style={styles.button}
@@ -98,6 +98,12 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
        marginBottom: 50
+    },
+    shadowProps: {
+      shadowColor: '#00000',
+      shadowOffset: {width: 2, height: 4},
+      shadowOpacity: 1,
+      shadowRadius: 3,
     }
     
 
