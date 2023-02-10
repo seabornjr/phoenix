@@ -5,6 +5,7 @@ import * as React from 'react';
 import { StyleSheet } from 'react-native';
 import BackgroundFirstGenScreen from './Screens/BackgroundFirstGenScreen.js';
 import BackgroundIncome from './Screens/BackgroundIncome.js';
+import BackgroundRacialScreen from './Screens/BackgroundRacialScreen.js';
 import BuildProfile from './Screens/BuildProfile.js';
 import GradeAndSchoolScreen from './Screens/GradeAndSchoolScreen.js';
 import GuardianInfo from './Screens/GuardianInfo.js';
@@ -56,6 +57,11 @@ export default function App() {
       <Stack.Screen
         name="BackgroundFirstGen"
         component={BackgroundFirstGenScreen}
+        options={{title: 'Background'}}
+      />
+      <Stack.Screen
+        name="BackgroundRacial"
+        component={BackgroundRacialScreen}
         options={{title: 'Background'}}
       />
       <Stack.Screen

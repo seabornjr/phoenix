@@ -24,7 +24,7 @@ const BackgroundFirstGenScreen = ({navigation}) => {
         </View>
         <TouchableOpacity 
             style={[styles.buttonContainer, styles.shadowProps]}
-            onPress={() => navigation.navigate("BackgroundIncome")}
+            onPress={() => navigation.navigate("BackgroundRacial")}
             >
             <Text style={styles.buttonTextCont}>Continue</Text>
         </TouchableOpacity>
