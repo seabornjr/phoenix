@@ -4,6 +4,8 @@ import { StyleSheet, TextInput, View } from 'react-native'
 const NameField = () => {
     const [first_name, setFirstName] = useState('')
     const [last_name, setLastName] = useState('')
+
+
   return (
     <View style={styles.containerDiv}>
     <View style={styles.container}>
