@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 const ContinueButton = () => {
-  const nextPage = ""
     return (
         <TouchableOpacity 
             style={[styles.buttonContainer, styles.shadowProps]}

@@ -16,14 +16,14 @@ const DateSelector = () => {
 
   const handleConfirm = (date) => {
     setDOB(`${date}`);
-    console.warn("A date has been picked: ", date);
+    console.warn("A date has been picked: ", DOB);
     hideDatePicker();
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
-        <Button title={DOB} onPress={showDatePicker} />
+        <Button title={DOB} onPress={showDatePicker} color="#000" />
         <DateTimePickerModal
           isVisible={isDatePickerVisible}
           mode="date"

@@ -14,6 +14,7 @@ const IncomeDropdown = () => {
             onSelect={(selectedItem, index) => {
                 console.log(selectedItem, index)
             }}
+            defaultButtonText={'Select an Income Range'}
             buttonTextAfterSelection={(selectedItem, index) => {
                 // text represented after item is selected
                 // if data array is an array of objects then return selectedItem.property to render after item is selected

@@ -19,6 +19,7 @@ const RaceEthnicityDropdown = () => {
                 setRace(selectedItem);
                 console.log(selectedItem, index)
             }}
+            defaultButtonText={'Ethnic Background'}
             buttonTextAfterSelection={(selectedItem, index) => {
                 // text represented after item is selected
                 // if data array is an array of objects then return selectedItem.property to render after item is selected
@@ -44,6 +45,7 @@ const RaceEthnicityDropdown = () => {
                 setRace(selectedItem);
                 console.log(selectedItem, index)
             }}
+            defaultButtonText={'Racial Background'}
             buttonTextAfterSelection={(selectedItem, index) => {
                 // text represented after item is selected
                 // if data array is an array of objects then return selectedItem.property to render after item is selected
