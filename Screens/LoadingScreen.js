@@ -1,11 +1,21 @@
-import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import Countdown from '../components/Countdown';
 
-const LoadingScreen = () => {
+const LoadingScreen = ({navigation}) => {
+
+  function ExitloadScreen() {
+     setTimeout(() => {
+      return navigation.navigate('FocusedHome')
+     }, 5000); 
+    }
+    ExitloadScreen();
+
   return (
     <View style={styles.container}>
       <Image source={require('../assets/gears1.png')} />
-      <Text style={styles.message}>Get Ready!...</Text>
+      <Text style={styles.message}>Get Ready!...</Text>  
+      <Countdown />
     </View>
   )
 }
@@ -20,5 +30,6 @@ const styles = StyleSheet.create({
     },
     message: {
         marginTop: 50
-    }
+    },
+
 })
