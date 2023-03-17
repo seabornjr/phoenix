@@ -19,7 +19,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.sheltonseaborn.phoenix"
+      "bundleIdentifier": "com.risingphoenix.phoenix"
     },
     "android": {
       "adaptiveIcon": {
