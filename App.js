@@ -7,7 +7,6 @@ import BackgroundFirstGenScreen from './Screens/BackgroundFirstGenScreen.js';
 import BackgroundIncome from './Screens/BackgroundIncome.js';
 import BackgroundRacialScreen from './Screens/BackgroundRacialScreen.js';
 import BuildProfile from './Screens/BuildProfile.js';
-import FocusedUserHome from './Screens/FocusedUserHome.js';
 import GradeAndSchoolScreen from './Screens/GradeAndSchoolScreen.js';
 import GuardianInfo from './Screens/GuardianInfo.js';
 import LoadingScreen from './Screens/LoadingScreen.js';
@@ -26,6 +25,7 @@ import WelcomeScreen from './Screens/WelcomeScreen.js';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
   return (
     <NavigationContainer>
     <Stack.Navigator>
@@ -117,11 +117,6 @@ export default function App() {
         name="LoadingScreen"
         component={LoadingScreen}
         options={{title: 'Loading Your Journey'}}
-      />
-      <Stack.Screen
-        name="FocusedHome"
-        component={FocusedUserHome}
-        options={{title: ''}}
       />
     </Stack.Navigator>
   </NavigationContainer>
