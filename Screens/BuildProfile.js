@@ -1,15 +1,24 @@
 import React, { useState } from 'react'
-import { Image, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View, Modal } from 'react-native'
 import CityStateSelector2 from '../components/CityStateSelector2'
 import DateSelector from '../components/DateSelector'
+import FormModal from '../components/FormModal'
 import GenderDropdown from '../components/GenderDropdown'
 import NameField from '../components/NameField'
+import ProfileModal from '../components/ProfileModal'
+import UploadImage from '../components/UploadImage'
+
 
 
 const BuildProfile = ({navigation}) => {
     
-const [avatar, setAvatar] = useState(require('../assets/DefaultAvatar.png'));
-
+    const [avatar, setAvatar] = useState(require('../assets/DefaultAvatar.png'));
+   
+    // function handleContinue() {
+    //     alert("continue button clicked");
+    // }
+    
+    
   return (
     <KeyboardAvoidingView
          style={styles.container}
@@ -17,21 +26,15 @@ const [avatar, setAvatar] = useState(require('../assets/DefaultAvatar.png'));
     >   
         <Text style={styles.heading}> Build Your Profile </Text>
         <View style={styles.imageContainer}>
-            <Image source={avatar} />
-            <Text style={styles.avatarPrompt}>Add Profile Picture</Text>
+        <UploadImage />
         </View>
         <NameField />
         <GenderDropdown />
         <DateSelector />
         <CityStateSelector2 />
-        <TouchableOpacity 
-            style={[styles.buttonContainer, styles.shadowProps]}
-            onPress={() => navigation.navigate("GuardianInfo")}
-            >
-            <Text style={styles.buttonText}>Continue</Text>
-        </TouchableOpacity>
-
-
+        
+       <FormModal navigation={navigation}/>
+       
     </KeyboardAvoidingView>
   )
 }
@@ -48,32 +51,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         textAlign: 'center',
         fontWeight: 'bold',
-        marginBottom: 50,
+        marginBottom: 40,
+        marginTop: 15,
         fontSize: 20 
       },
     imageContainer: {
-        padding: 20
+        padding: 15,
+        alignItems: 'center',
     },
     avatarPrompt: {
         marginTop: 5
-    },
-    buttonContainer:{
-        width: '90%',
-        backgroundColor: '#FE5244',
-        borderRadius: 10,
-        marginTop: 10,
-        marginBottom: 50
-
-    },
-    buttonText: {
-        color: 'white',
-        width: '100%',
-        textAlign: 'center',
-        fontWeight: 'bold',
-        fontSize: 16,
-        borderRadius: 10,
-        padding: 10,
-        margin: 2
     },
     shadowProps: {
         shadowColor: '#00000',

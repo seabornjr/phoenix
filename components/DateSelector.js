@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Button, StyleSheet, View } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
+
 const DateSelector = () => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
-  const [DOB, setDOB] = useState('Date of Birth');
+  const [dob,setDob] = useState('Date of Birth');
 
   const sendToDatabase = () => {
-    alert('current date is: ' + DOB);
+    alert('current date is: ' + dob);
   };
 
   const showDatePicker = () => {
@@ -19,10 +20,15 @@ const DateSelector = () => {
   };
 
   const handleConfirm = (date) => {
-    setDOB(date);
-    console.warn("A date has been picked: ", DOB);
+    const stringifiedDate  = date.toString();
+    const parsed = stringifiedDate.split(" ");
+    console.log(`Formatted date: ${parsed[1]} ${parsed[2]}, ${parsed[3]}`)
+    const formattedDate = `${parsed[1]} ${parsed[2]}, ${parsed[3]}`
     hideDatePicker();
-   //sendToDatabase();
+    
+   return setDob(formattedDate);
+    console.warn("A date has been picked: ", dob);
+  
   };
 
  
@@ -30,7 +36,7 @@ const DateSelector = () => {
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
-        <Button title={DOB.toString()} onPress={showDatePicker} color="#000" />
+        <Button title={dob.toString()} onPress={showDatePicker} color="#000" />
         <DateTimePickerModal
           isVisible={isDatePickerVisible}
           mode="date"

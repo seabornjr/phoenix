@@ -1,6 +1,8 @@
 //gather dependencies
 const {Client} = require('pg');
 const express = require('express');
+const multer = require('multer');
+const bodyParser = require('body-parser');
 var cors = require('cors');
 const config = require('../config.json')[process.env.NODE_ENV || "dev"];
 const bcrypt = require('bcrypt');
@@ -18,7 +20,20 @@ const client = new Client({
 const app = express();
 client.connect();
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(cors());
+
+// ser up storage environment for profile photo
+const Storage = multer.diskStorage({
+    destination(req, file, callback) {
+      callback(null, './images');
+    },
+    filename(req, file, callback) {
+      callback(null, `${file.fieldname}_${Date.now()}_${file.originalname}`);
+    },
+  });
+  
+  const upload = multer({ storage: Storage });
 
 
 //set the root path
@@ -68,6 +83,15 @@ app.post('/learner', (req, res) => {
 })
     } catch (error) { }
 })
+
+//POST: Create a post route to updload profile picture
+app.post('/api/upload', upload.array('photo', 3), (req, res) => {
+    console.log('file', req.files);
+    console.log('body', req.body);
+    res.status(200).json({
+      message: 'success!',
+    });
+  });
 
 //UPDATE: PATCH registration information using learner id
 app.patch('/learner/:id', (req, res) => {
