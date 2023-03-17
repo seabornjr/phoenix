@@ -6,6 +6,10 @@ const DateSelector = () => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [DOB, setDOB] = useState('Date of Birth');
 
+  const sendToDatabase = () => {
+    alert('current date is: ' + DOB);
+  };
+
   const showDatePicker = () => {
     setDatePickerVisibility(true);
   };
@@ -15,15 +19,18 @@ const DateSelector = () => {
   };
 
   const handleConfirm = (date) => {
-    setDOB(`${date}`);
+    setDOB(date);
     console.warn("A date has been picked: ", DOB);
     hideDatePicker();
+   //sendToDatabase();
   };
+
+ 
 
   return (
     <View style={styles.container}>
       <View style={styles.buttonContainer}>
-        <Button title={DOB} onPress={showDatePicker} color="#000" />
+        <Button title={DOB.toString()} onPress={showDatePicker} color="#000" />
         <DateTimePickerModal
           isVisible={isDatePickerVisible}
           mode="date"
@@ -48,6 +55,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 1,
     borderColor: '#444',
+    
  
   }
 })
