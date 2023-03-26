@@ -1,7 +1,8 @@
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import UserMenu from '../components/UserMenu'
 
-const FocusedUserHome = () => {
+const FocusedUserHome = ({navigation}) => {
     const user = 'Shelton'
   return (
     <View style={styles.container}>
@@ -20,6 +21,7 @@ const FocusedUserHome = () => {
       <TouchableOpacity style={styles.cardDiv3}>
           <Text style={styles.cardText1}>Data Analyst AP Courses</Text>
       </TouchableOpacity>
+      <UserMenu navigation={navigation}/>
     </View>
   )
 }

@@ -21,6 +21,8 @@ import PreferencesScreen3 from './Screens/PreferencesScreen3.js';
 import ResourcesPreview from './Screens/ResourcesPreview.js';
 import UserType from './Screens/UserType.js';
 import WelcomeScreen from './Screens/WelcomeScreen.js';
+import FocusedUserHome from './Screens/FocusedUserHome.js';
+import UserPortfolio from './Screens/UserPortfolio.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -117,6 +119,16 @@ export default function App() {
         name="LoadingScreen"
         component={LoadingScreen}
         options={{title: 'Loading Your Journey'}}
+      />
+      <Stack.Screen
+        name="FocusedUser1HomeScreen"
+        component={FocusedUserHome}
+        options={{title: 'Your Journey'}}
+      />
+      <Stack.Screen
+        name="PortfolioScreen"
+        component={UserPortfolio}
+        options={{title: 'Your Portfolio'}}
       />
     </Stack.Navigator>
   </NavigationContainer>

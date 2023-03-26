@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import UserMenu from '../components/UserMenu'
 
 const WelcomeScreen = ({navigation}) => {
   return (
@@ -12,7 +13,7 @@ const WelcomeScreen = ({navigation}) => {
             >
             <Text style={styles.buttonTextCont}>Continue</Text>
         </TouchableOpacity>  
-  
+        <UserMenu navigation={navigation}/>
     </View>
   )
 }

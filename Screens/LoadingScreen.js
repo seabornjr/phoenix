@@ -6,7 +6,7 @@ const LoadingScreen = ({navigation}) => {
 
   function ExitloadScreen() {
      setTimeout(() => {
-      return navigation.navigate('FocusedHome')
+      return navigation.navigate('FocusedUser1HomeScreen')
      }, 5000); 
     }
     ExitloadScreen();
