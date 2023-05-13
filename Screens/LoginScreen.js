@@ -39,7 +39,7 @@ const LoginScreen = ({navigation}) => {
        
         <View style={[styles.buttonContainer, styles.shadowProps]}>
             <TouchableOpacity 
-                onPress={()=>{navigation.navigate('BuildProfile')}}
+                onPress={()=>{navigation.navigate('FocusedUser1HomeScreen')}}
                 style={styles.button}
             >
             <Text style={styles.button}>Login</Text>
@@ -48,7 +48,7 @@ const LoginScreen = ({navigation}) => {
 
         <Image source={require('../assets/Divider.png')} />
 
-        <ThirdPartyLogin />
+        <ThirdPartyLogin navigation={navigation}/>
         
         <View style={styles.footerContainer}>
           <Text style={styles.footerText}>Need an account? Register </Text>
@@ -129,10 +129,12 @@ const styles = StyleSheet.create({
     },
     footerText: {
       fontWeight: 'bold',
+      fontSize: 18
     },
     registerHere: {
       color: '#FE5244',
       fontWeight: 'bold',
+      fontSize: 18
     }
     
 

@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: 'white',
     },
     heading: {
         justifyContent: 'center',
@@ -35,7 +36,8 @@ const styles = StyleSheet.create({
         width: '80%'
       },
     shadowProps: {
-        shadowColor: '#00000',
+        backgroundColor: '#FE5244',
+        shadowColor: 'black',
         shadowOffset: {width: 2, height: 4},
         shadowOpacity: 1,
         shadowRadius: 3,

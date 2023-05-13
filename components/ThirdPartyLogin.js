@@ -3,20 +3,23 @@ import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 
 
-const ThirdPartyLogin = () => {
+const ThirdPartyLogin = ({navigation}) => {
 
     const GoogleLogo = require('../assets/GoogleLogo.png');
     const FacebookLogo = require('../assets/FacebookLogo.png');
     const AppleLogo = require('../assets/AppleLogo.png');
 
     const handleGoogle = () => {
-        return alert("Signing in with Google...");
+        navigation.navigate('FocusedUser1HomeScreen')
+        return alert("This will allow the user to authenticate with their Google account.");
     };
     const handleFacebook = () => {
-        return alert("Signing in with Facebook...");
+        navigation.navigate('FocusedUser1HomeScreen')
+        return alert("This will allow the user to authenticate with their Meta Account...");
     };
     const handleApple = () => {
-        return alert("Signing in with Apple...");
+        navigation.navigate('FocusedUser1HomeScreen')
+        return alert("This will allow the user to autheticate with their Apple id");
     };
 
 

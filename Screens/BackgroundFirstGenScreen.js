@@ -3,7 +3,8 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const BackgroundFirstGenScreen = ({navigation}) => {
     const handleClick = (event) => {
-        return alert('the user clicked ', event.target)
+        navigation.navigate("BackgroundRacial")
+        return alert('First Generation info entered into the database ', event.target)
     }
   return (
     <View style={styles.container}>

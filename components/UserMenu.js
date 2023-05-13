@@ -1,9 +1,7 @@
-import { Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
+import { faBriefcase, faHouse, faMessage } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
-import { faMessage } from '@fortawesome/free-solid-svg-icons'
+import React from 'react'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 
 
 
@@ -20,7 +18,8 @@ const UserMenu = ({navigation}) => {
           onPress={()=>{navigation.navigate('PortfolioScreen')}} >
           <FontAwesomeIcon icon={faBriefcase}/>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuButton} >
+        <TouchableOpacity style={styles.menuButton} 
+          onPress={()=>{alert('chat feature coming soon!')}} >
           <FontAwesomeIcon icon={faMessage}/>
         </TouchableOpacity>
       </View>

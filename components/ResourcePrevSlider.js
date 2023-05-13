@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   body: {
     width: '90%',
-    alignSelf: 'center',
+    alignSelf: 'flex-start',
     padding: 10,
   },
   para: {

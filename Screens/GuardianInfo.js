@@ -8,7 +8,10 @@ const GuardianInfo = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Enter Your Parent or Guardian Information</Text>
+        <View style={styles.headingContainer}>
+            <Text style={styles.heading}>Enter Your Parent or Guardian Information</Text>
+        </View>
+      
       <View style={styles.inputContainer}>
         <NameField />
         <View style={styles.inputContainer2}>
@@ -40,6 +43,9 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    headingContainer: {
+        width: '90%'
     },
     heading: {
         justifyContent: 'center',

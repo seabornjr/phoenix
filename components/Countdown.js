@@ -1,27 +1,25 @@
-import React, { useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Countdown = () => {
 
-    const [currentCount, setcurrentCount] = useState(5)
-    
-    const ticker = () => {
-      if (currentCount > 0) {
-        setcurrentCount(currentCount - 1)
-      } 
-    }
+  const [count, setCount] = useState(5);
 
-    function makeItCount() {
-      while (currentCount > 0) {
-        setInterval(ticker,1000);
+  useEffect(() => {
+      const timer = setInterval(() => {
+        setCount((prevCount) => prevCount - 1);
+      }, 1000);
+      if (count === 0) {
+        clearInterval(timer);
       }
-    }
-    //makeItCount();
+      return () => clearInterval(timer);
+    
+  }, [count]);
 
 
   return (
     <View style={styles.countdownDiv}>
-      <Text style={styles.countdownSyle}>{currentCount}</Text>
+      <Text style={styles.countdownSyle}>{count}</Text>
     </View>
   )
 }

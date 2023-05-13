@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View, Linking } from 'react-native'
+import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import UserMenu from '../components/UserMenu'
 
 const FocusedUserHome = ({navigation}) => {
@@ -13,14 +13,14 @@ const FocusedUserHome = ({navigation}) => {
           <Image source={require('../assets/GoogleDAPreview.png')}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.cardDiv1}>
-          <Text style={styles.cardText1} onPress={()=> { Linking.openURL("https://roadmap.sh/")}}>Data Analyst Roadmap</Text>
+          <Text style={styles.cardText1} onPress={()=> { Linking.openURL("https://medium.com/javarevisited/the-2020-data-analyst-roadmap-9a2d64d3bdfe")}}>Data Analyst Roadmap</Text>
 
       </TouchableOpacity>
       <TouchableOpacity style={styles.cardDiv2}>
-          <Text style={styles.cardText1}>Courses Offered by Google</Text>
+          <Text style={styles.cardText1} onPress={()=> { Linking.openURL("https://grow.google/certificates/data-analytics/?utm_source=google&utm_medium=paidsearch&utm_campaign=ha-sem-sitelink__geo--US&utm_term=google%20data%20analystics&gad=1&gclid=CjwKCAjw6vyiBhB_EiwAQJRopqUR7gDJqFPoTXLvBsHJWMBFtdJqEFjDZuHuesY5IVFXf2SQ1oeuzBoCrE8QAvD_BwE#?modal_active=none")}}>Courses Offered by Google</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.cardDiv3}>
-          <Text style={styles.cardText1}>Data Analyst AP Courses</Text>
+          <Text style={styles.cardText1} onPress={()=> { Linking.openURL("https://www.edx.org/search?q=data+analysis&tab=course")}}>Data Analyst AP Courses</Text>
       </TouchableOpacity>
       <UserMenu navigation={navigation}/>
     </View>
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     greeting: {
-        alignItems: 'left',
+        alignItems: 'flex-start',
         marginTop: 20,
         marginBottom: 50,
         fontWeight: 'bold',

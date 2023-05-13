@@ -1,6 +1,5 @@
-import { StyleSheet, Text, View, Pressable, Modal, Image, TextInput} from 'react-native'
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Image, Modal, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import VolunteerDateSelector from './VolunteerDateSelector';
 
 const VolunteerFormModal = ({navigation}) => {
@@ -149,6 +148,7 @@ const styles = StyleSheet.create({
 
       },
       shadowProps: {
+        backgroundColor: 'black',
         shadowColor: '#00000',
         shadowOffset: {width: 2, height: 4},
         shadowOpacity: 1,
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     formText: {      
         marginTop: 25,
         marginLeft: 15,
-        alignSelf: 'left',
+        alignSelf: 'flex-start',
         fontSize: 16  
     },
     fromAndToContainer: {
