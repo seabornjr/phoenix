@@ -17,7 +17,6 @@ const LoginScreen = ({navigation}) => {
             />
         </View>
 
-
         <View style={styles.headingContainer}>
           <Text style={styles.heading}>Please Login</Text>
         </View>

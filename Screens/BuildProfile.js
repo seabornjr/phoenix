@@ -26,7 +26,7 @@ const BuildProfile = ({navigation}) => {
     >   
         <Text style={styles.heading}> Build Your Profile </Text>
         <View style={styles.imageContainer}>
-        <UploadImage />
+            <UploadImage />
         </View>
         <NameField />
         <GenderDropdown />

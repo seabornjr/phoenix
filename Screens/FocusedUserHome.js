@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View, Linking } from 'react-native'
 import UserMenu from '../components/UserMenu'
 
 const FocusedUserHome = ({navigation}) => {
@@ -13,7 +13,8 @@ const FocusedUserHome = ({navigation}) => {
           <Image source={require('../assets/GoogleDAPreview.png')}/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.cardDiv1}>
-          <Text style={styles.cardText1}>Data Analyst Roadmap</Text>
+          <Text style={styles.cardText1} onPress={()=> { Linking.openURL("https://roadmap.sh/")}}>Data Analyst Roadmap</Text>
+
       </TouchableOpacity>
       <TouchableOpacity style={styles.cardDiv2}>
           <Text style={styles.cardText1}>Courses Offered by Google</Text>
