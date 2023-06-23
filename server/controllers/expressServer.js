@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
-// ser up storage environment for profile photo
+// set up storage environment for profile photo
 const Storage = multer.diskStorage({
     destination(req, file, callback) {
       callback(null, './images');
