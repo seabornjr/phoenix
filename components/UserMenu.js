@@ -32,7 +32,7 @@ export default UserMenu
 const styles = StyleSheet.create({
     container: {
         flex: .4,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignContent: 'center',
         alignItems: 'center',
         marginTop: 100,

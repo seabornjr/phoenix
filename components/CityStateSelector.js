@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     width,
     height: 50,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     backgroundColor: '#F6F6F6',
   },
   headerTitle: {color: '#000', fontWeight: 'bold', fontSize: 16},

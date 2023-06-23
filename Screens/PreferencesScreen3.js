@@ -34,12 +34,12 @@ export default PreferencesScreen3
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'top',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 50
     },
     heading: {
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         textAlign: 'left',
         fontWeight: 'bold',
         marginBottom: 50,

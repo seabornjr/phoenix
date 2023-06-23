@@ -41,14 +41,14 @@ export default GuardianInfo
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
     },
     headingContainer: {
         width: '90%'
     },
     heading: {
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         textAlign: 'center',
         fontWeight: 'bold',
         marginBottom: 50,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         borderWidth: 1,
         borderColor: '#444',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         marginTop: 10
     },
     input: {

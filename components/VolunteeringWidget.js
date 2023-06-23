@@ -1,6 +1,5 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import VolunteerFormModal from './VolunteerFormModal'
 
 const VolunteeringWidget = () => {
@@ -19,7 +18,7 @@ export default VolunteeringWidget
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         marginTop: 10,
     },
     volunteerHeader: {

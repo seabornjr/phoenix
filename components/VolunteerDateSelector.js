@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     container:{
         paddingTop: 10,
         width: 350,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
       },
     buttonContainer: {

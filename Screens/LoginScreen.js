@@ -65,13 +65,13 @@ const LoginScreen = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         backgroundColor: 'white'
         
     },
     heading: {
-      justifyContent: 'center',
+      justifyContent: 'space-evenly',
       textAlign: 'center',
       fontWeight: 'bold',
       marginBottom: 15,
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         width: '60%',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
         margin: 10,
         marginBottom: 40

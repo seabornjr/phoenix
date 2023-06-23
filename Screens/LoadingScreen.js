@@ -25,7 +25,7 @@ export default LoadingScreen
 const styles = StyleSheet.create({
     container: {
         flex: .75,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
     },
     message: {

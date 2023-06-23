@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         borderWidth: 1,
         borderColor: '#444',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         marginRight: 5
        
     },

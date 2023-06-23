@@ -1,5 +1,5 @@
-import { Modal, StyleSheet, Text, View } from 'react-native'
-import React, {useState, Pressable} from 'react'
+import React, { Pressable, useState } from 'react';
+import { Modal, StyleSheet, Text, View } from 'react-native';
 
 const ProfileModal = () => {
 
@@ -41,7 +41,7 @@ export default ProfileModal
 
 const styles = StyleSheet.create({
  container: {
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     width: '80%',
     height: 300,

@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, View } from 'react-native'
+import EveryoneLeaderboardList from '../components/EveryoneLeaderboardList'
 import LeaderboardOptions from '../components/LeaderboardOptions'
 import LeaderboardTop3 from '../components/LeaderboardTop3'
-import EveryoneLeaderboardList from '../components/EveryoneLeaderboardList'
 import UserMenu from '../components/UserMenu'
 
 const FriendsLeaderboardScreen = ({navigation}) => {
@@ -21,7 +21,7 @@ export default FriendsLeaderboardScreen
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
     }
 })

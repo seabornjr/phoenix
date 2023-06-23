@@ -28,12 +28,12 @@ export default PersonalityScreen3
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
        
     },
     heading: {
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         textAlign: 'center',
         fontWeight: 'bold',
         marginBottom: 50,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         width: '80%'
       },
     cardDiv:{
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         width: '80%',
         height: 300,

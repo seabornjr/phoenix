@@ -1,5 +1,5 @@
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native'
-import React, {useState} from 'react'
+import React, { useState } from 'react';
+import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
 
 const FormModal = ({navigation}) => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -41,7 +41,7 @@ export default FormModal
 const styles = StyleSheet.create({
     centeredView: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         marginTop: 5,
       },

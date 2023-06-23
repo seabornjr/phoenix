@@ -32,7 +32,7 @@ export default FocusedUserHome
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'top',
+        justifyContent: 'flex-start',
         alignItems: 'center',
     },
     greeting: {
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         textAlign: 'left'
     },
     cardDiv1:{
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         width: '80%',
         height: 50,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         marginTop: 20       
     },
     cardDiv2:{
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         width: '80%',
         height: 50,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         marginTop: 20       
     },
     cardDiv3:{
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         width: '80%',
         height: 50,

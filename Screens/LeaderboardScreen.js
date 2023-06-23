@@ -1,9 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import LeaderboardOptions from '../components/LeaderboardOptions'
-import UserMenu from '../components/UserMenu'
-import LeaderboardTop3 from '../components/LeaderboardTop3'
+import { StyleSheet, View } from 'react-native'
 import EveryoneLeaderboardList from '../components/EveryoneLeaderboardList'
+import LeaderboardOptions from '../components/LeaderboardOptions'
+import LeaderboardTop3 from '../components/LeaderboardTop3'
+import UserMenu from '../components/UserMenu'
 
 const LeaderboardScreen = ({navigation}) => {
   return (
@@ -22,7 +22,7 @@ export default LeaderboardScreen
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
     }
 })

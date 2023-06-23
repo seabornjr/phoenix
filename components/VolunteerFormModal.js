@@ -97,7 +97,7 @@ export default VolunteerFormModal
 
 const styles = StyleSheet.create({
     centeredView: {
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         marginTop: 50,
       },

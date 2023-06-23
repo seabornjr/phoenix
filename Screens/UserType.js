@@ -51,7 +51,7 @@ const UserType = ({navigation}) => {
       justifyContent: "center",
     },
      heading: {
-       justifyContent: 'center',
+       justifyContent: 'space-evenly',
        textAlign: 'center',
        fontWeight: 'bold',
        marginBottom: 75,

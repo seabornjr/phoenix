@@ -7,6 +7,7 @@ import BackgroundFirstGenScreen from './Screens/BackgroundFirstGenScreen.js';
 import BackgroundIncome from './Screens/BackgroundIncome.js';
 import BackgroundRacialScreen from './Screens/BackgroundRacialScreen.js';
 import BuildProfile from './Screens/BuildProfile.js';
+import FocusedUserHome from './Screens/FocusedUserHome.js';
 import GradeAndSchoolScreen from './Screens/GradeAndSchoolScreen.js';
 import GuardianInfo from './Screens/GuardianInfo.js';
 import LoadingScreen from './Screens/LoadingScreen.js';
@@ -19,10 +20,9 @@ import PreferencesScreen1_2 from './Screens/PreferencesScreen1_2.js';
 import PreferencesScreen2_1 from './Screens/PreferencesScreen2_1.js';
 import PreferencesScreen3 from './Screens/PreferencesScreen3.js';
 import ResourcesPreview from './Screens/ResourcesPreview.js';
+import UserPortfolio from './Screens/UserPortfolio.js';
 import UserType from './Screens/UserType.js';
 import WelcomeScreen from './Screens/WelcomeScreen.js';
-import FocusedUserHome from './Screens/FocusedUserHome.js';
-import UserPortfolio from './Screens/UserPortfolio.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -140,6 +140,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
 });

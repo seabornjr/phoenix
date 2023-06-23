@@ -1,5 +1,5 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const LeaderboardOptions = ({navigation}) => {
   return (
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         padding: 5,
         margin: 5,
     },  

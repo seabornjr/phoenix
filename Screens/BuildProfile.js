@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { Image, KeyboardAvoidingView, StyleSheet, Text, TouchableOpacity, View, Modal } from 'react-native'
+import { KeyboardAvoidingView, StyleSheet, Text, View } from 'react-native'
 import CityStateSelector2 from '../components/CityStateSelector2'
 import DateSelector from '../components/DateSelector'
 import FormModal from '../components/FormModal'
 import GenderDropdown from '../components/GenderDropdown'
 import NameField from '../components/NameField'
-import ProfileModal from '../components/ProfileModal'
 import UploadImage from '../components/UploadImage'
 
 
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     }, 
     heading: {
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         textAlign: 'center',
         fontWeight: 'bold',
         marginBottom: 40,
