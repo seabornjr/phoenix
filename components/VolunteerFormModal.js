@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         width: 325,
         flexDirection: "row",
         textAlign: "left",
-        justifyContent: "left"
+        justifyContent: "flex-start",
     },
     fromAndToTitleContainer: {
         width: "50%",

@@ -1,7 +1,7 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import React from 'react'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 
 const PortfolioOptions = () => {
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
        marginLeft: 80
     },
     optionButton: {
-        justifyContent: 'left',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         flexDirection: 'row',
         width: '80%',
