@@ -95,6 +95,7 @@ app.post('/api/upload', upload.array('photo', 3), (req, res) => {
 
 //UPDATE: PATCH registration information using learner id
 app.patch('/learner/:id', (req, res) => {
+    //separat the registraion route to store username and passowrd in seapare userDB with remaining data in the appropate DB for user type
     try {
         const learner_id = req.params.id;
         const  first_name = req.body.first_name;

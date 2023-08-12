@@ -37,9 +37,11 @@ const LoginScreen = ({navigation}) => {
           />
         </View>
        
-        <View style={[styles.buttonContainer, styles.shadowProps]}>
+        <View style={[styles.buttonContainer]}>
             <TouchableOpacity 
-                onPress={()=>{navigation.navigate('FocusedUser1HomeScreen')}}
+                onPress={()=>{
+                  
+                  navigation.navigate('FocusedUser1HomeScreen')}}
                 style={styles.button}
             >
             <Text style={styles.button}>Login</Text>
@@ -95,8 +97,9 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
         margin: 10,
-        marginBottom: 40
-        
+        marginBottom: 40,
+        borderRadius: 10,
+           
     },
     button: {
         backgroundColor: '#FE5244',
@@ -110,8 +113,9 @@ const styles = StyleSheet.create({
 
     },
     buttonOutline: {
-        marginTop: 5,
+        marginTop: 4,
         borderWidth: 2,
+        borderColor: 'black',
         backgroundColor: "#FE5244",
     },
     imageContainer: {

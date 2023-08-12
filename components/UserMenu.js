@@ -1,4 +1,4 @@
-import { faBriefcase, faHouse, faMessage } from '@fortawesome/free-solid-svg-icons'
+import { faBookOpen, faBriefcase, faHouse, faMessage } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
@@ -21,6 +21,10 @@ const UserMenu = ({navigation}) => {
         <TouchableOpacity style={styles.menuButton} 
           onPress={()=>{alert('chat feature coming soon!')}} >
           <FontAwesomeIcon icon={faMessage}/>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menuButton} 
+          onPress={()=>{alert('Student Marketplace coming soon!')}} >
+          <FontAwesomeIcon icon={faBookOpen}/>
         </TouchableOpacity>
       </View>
     </View>
