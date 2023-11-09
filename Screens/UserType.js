@@ -8,7 +8,7 @@ const UserType = ({navigation}) => {
    }
 
    const handleClickCounselor = () =>{
-    return alert('Counselor Features Coming Soon');
+    return navigation.navigate('GuidanceDashboard');
    }
 
      return (

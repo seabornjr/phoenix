@@ -10,6 +10,7 @@ import BuildProfile from './Screens/BuildProfile.js';
 import FocusedUserHome from './Screens/FocusedUserHome.js';
 import GradeAndSchoolScreen from './Screens/GradeAndSchoolScreen.js';
 import GuardianInfo from './Screens/GuardianInfo.js';
+import GuidanceDashboard from './Screens/GuidanceDashboard.js';
 import LoadingScreen from './Screens/LoadingScreen.js';
 import LoginScreen from './Screens/LoginScreen.js';
 import PersonalityScreen1 from './Screens/PersonalityScreen1.js';
@@ -129,6 +130,11 @@ export default function App() {
         name="PortfolioScreen"
         component={UserPortfolio}
         options={{title: 'Your Portfolio'}}
+      />
+      <Stack.Screen
+        name="GuidanceDashboard"
+        component={GuidanceDashboard}
+        options={{title: 'Guidance Dashboard'}}
       />
     </Stack.Navigator>
   </NavigationContainer>
