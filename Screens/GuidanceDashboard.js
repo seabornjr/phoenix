@@ -1,17 +1,19 @@
 
 import React from 'react';
-import { Text, View } from 'react-native';
-import AcademicListData from '../components/AcademicListData';
+import { View } from 'react-native';
+import TableExample from '../components/AcademicsTable';
+import GuidanceDashboardStudentTabs from '../components/GuidanceDashboardStudentTabs';
 import SudentDashboardCard from '../components/SudentDashboardCard';
 
 const GuidanceDashboard = () => {
   
   return (
     <View>
-     <Text >Sup</Text>
+    
      <SudentDashboardCard />
-     {/* <AcadmicsTable /> */}
-     <AcademicListData />
+     <GuidanceDashboardStudentTabs />
+     <TableExample />
+     
       
    
     </View>
