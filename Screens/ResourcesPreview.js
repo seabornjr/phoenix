@@ -6,9 +6,9 @@ const ResourcesPreview = ({navigation}) => {
   return (
    <> 
        <ResourcePrevSlider />
-       <View style={styles.container}>
+      <View style={[styles.container]}>
       <TouchableOpacity 
-        style={styles.button} 
+        style={[styles.buttonContainer, styles.shadowProps]} 
         title='Next'
         onPress={() => navigation.navigate('Login')}
       >
@@ -29,15 +29,34 @@ const styles = new StyleSheet.create({
     width: '80%', 
   },
   container: {
-    bottom: 100,
+    bottom: 150,
     alignItems: 'center',
+    marginTop: 25,
+  },
+
+  buttonContainer:{
+    width: '90%',
+    backgroundColor: '#FE5244',
+    borderRadius: 10,
+    marginTop: 10,
+    marginBottom: 50
   },
   buttonText: {
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 20,
-    color: 'white' 
-  }
+      color: 'white',
+      width: '100%',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      fontSize: 16,
+      borderRadius: 10,
+      padding: 10,
+      margin: 2
+  },
+    shadowProps: {
+      shadowColor: '#00000',
+      shadowOffset: {width: 2, height: 4},
+      shadowOpacity: 1,
+      shadowRadius: 3,
+    },
 })
 
 export default ResourcesPreview

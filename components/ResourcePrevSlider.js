@@ -83,7 +83,7 @@ const scrollX = useRef(new Animated.Value(0)).current;
 
 const styles = StyleSheet.create({
   heading: {
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     textAlign: 'center',
     fontWeight: 'bold',
     margin: 20,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   body: {
     width: '90%',
-    alignSelf: 'center',
+    alignSelf: 'flex-start',
     padding: 10,
   },
   para: {
