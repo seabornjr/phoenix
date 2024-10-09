@@ -1,25 +1,24 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { Avatar } from "react-native-paper";
 
 const SudentDashboardCard = () => {
 
-    const exampleUser = require("../assets/userAvatar1.png");
-
   return (
-    <View style={styles.container}>
-        <View style={styles.avatarContainer}>
-            <Image source={exampleUser} style={{width: 60, height: 60}}/>
-        </View>
-        <View >
-            <Text style={styles.studentText}>Jordan</Text>
-            <Text style={styles.studentText}>11th Grade</Text>
-        </View>
-        <View style={styles.attributeTag}>
-            <Text style={styles.attributeText}>First Generation</Text>
-        </View>
-        <View style={styles.attributeTag}>
-            <Text style={styles.attributeText}>African-American</Text>
-        </View>
-
+    <View style={[styles.container, styles.shadowProps]}>       
+                <View style={styles.avatarContainer}>
+                   <Avatar.Image size={86} source={ require("../assets/userAvatar1.png")}/>
+                </View>
+            <View >
+                <Text style={styles.studentText}>Jordan</Text>
+                <Text style={styles.studentText}>11th Grade</Text>
+            </View>
+            <View style={styles.attributeTag}>
+                <Text style={styles.attributeText}>First Generation</Text>
+            </View>
+            <View style={styles.attributeTag}>
+                <Text style={styles.attributeText}>African-American</Text>
+            </View>
+            
     </View>
   )
 }
@@ -27,8 +26,12 @@ const SudentDashboardCard = () => {
 export default SudentDashboardCard
 
 const styles = StyleSheet.create({
+    table: { 
+        padding: 15, 
+      }, 
     container: {
-        width: '90x%',
+        width: '90%',
+        height: '40%',
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
@@ -38,12 +41,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#F0F0F0',
     },
     studentText: {
-        fontSize: 16,
-        fontWeight: 'bold'
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        margin: 3,
+
     },
     attributeTag: {
         width: '50%',
-        height: 30,
+        height: 40,
         position: 'flex',
         backgroundColor: '#6750A4',
         borderRadius: 10,
@@ -56,6 +62,12 @@ const styles = StyleSheet.create({
         padding: 5,
         textAlign: 'center',
         fontSize: 16,
+    },
+    shadowProps: {  
+        shadowOffset: {width: -2, height: 4},
+        shadowColor: '#171717',
+        shadowOpacity: 0.2,
+        shadowRadius: 3
     }
 
 

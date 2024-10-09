@@ -1,62 +1,52 @@
 
-import React, { Component } from 'react';
-import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { Cell, Row, Table, TableWrapper } from 'react-native-table-component';
-
-export default class AcadmicsTable extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      tableHead: ['Head', 'Head2', 'Head3', 'Head4'],
-      tableData: [
-        ['1', '2', '3', '4'],
-        ['a', 'b', 'c', 'd'],
-        ['1', '2', '3', '4'],
-        ['a', 'b', 'c', 'd']
-      ]
-    }
-  }
-
-  _alertIndex(index) {
-    Alert.alert(`This is row ${index + 1}`);
-  }
-
-  render() {
-    const state = this.state;
-    const element = (data, index) => (
-      <TouchableOpacity onPress={() => this._alertIndex(index)}>
-        <View style={styles.btn}>
-          <Text style={styles.btnText}>button</Text>
-        </View>
-      </TouchableOpacity>
-    );
-
-    return (
-      <View style={styles.container}>
-        <Table borderStyle={{borderColor: 'transparent'}}>
-          <Row data={state.tableHead} style={styles.head} textStyle={styles.text}/>
-          {
-            state.tableData.map((rowData, index) => (
-              <TableWrapper key={index} style={styles.row}>
-                {
-                  rowData.map((cellData, cellIndex) => (
-                    <Cell key={cellIndex} data={cellIndex === 3 ? element(cellData, index) : cellData} style={styles.text}/>
-                  ))
-                }
-              </TableWrapper>
-            ))
-          }
-        </Table>
-      </View>
-    )
-  }
-}
-
-const styles = StyleSheet.create({
-  container: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
-  head: { height: 40, backgroundColor: '#808B97' },
-  text: { margin: 6 },
-  row: { flexDirection: 'row', backgroundColor: '#FFF1C1' },
-  btn: { width: 58, height: 18, backgroundColor: '#78B7BB',  borderRadius: 2 },
-  btnText: { textAlign: 'center', color: '#fff' }
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { DataTable } from 'react-native-paper';
+import SubjectsModal from './SubjectsModal';
+  
+const TableExample = () => { 
+  return ( 
+    <DataTable style={styles.container}> 
+      <DataTable.Header style={styles.tableHeader}> 
+        <DataTable.Title>Grade</DataTable.Title> 
+        <DataTable.Title>GPA</DataTable.Title> 
+        <DataTable.Title>Subjects</DataTable.Title> 
+      </DataTable.Header> 
+      <DataTable.Row> 
+        <DataTable.Cell>6th</DataTable.Cell> 
+        <DataTable.Cell>3.8</DataTable.Cell> 
+        <DataTable.Cell>Subjects List <SubjectsModal /></DataTable.Cell> 
+      </DataTable.Row> 
+  
+      <DataTable.Row> 
+        <DataTable.Cell>7th</DataTable.Cell> 
+        <DataTable.Cell>3.7</DataTable.Cell> 
+        <DataTable.Cell>Subjects List <SubjectsModal /></DataTable.Cell>
+    </DataTable.Row>
+      <DataTable.Row> 
+        <DataTable.Cell>8th</DataTable.Cell> 
+        <DataTable.Cell>3.9</DataTable.Cell> 
+        <DataTable.Cell>Subjects List <SubjectsModal/></DataTable.Cell> 
+        
+      </DataTable.Row> 
+      <DataTable.Row> 
+        <DataTable.Cell>9th</DataTable.Cell> 
+        <DataTable.Cell>4.0</DataTable.Cell> 
+        <DataTable.Cell>Subjects List <SubjectsModal /></DataTable.Cell> 
+  
+      </DataTable.Row> 
+    </DataTable> 
+  ); 
+}; 
+  
+export default TableExample; 
+  
+const styles = StyleSheet.create({ 
+  container: { 
+    padding: 5, 
+  }, 
+  tableHeader: { 
+    backgroundColor: '#DCDCDC', 
+  }, 
 });
+
